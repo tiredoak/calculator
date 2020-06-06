@@ -5,7 +5,9 @@ const App = () => {
   const [expression, setExpression] = useState("");
 
   const updateExpression = (e) => {
-    setExpression(expression + e.target.value);
+    e.target.value === "="
+      ? setExpression(eval(expression))
+      : setExpression(expression + e.target.value);
   };
 
   return (
@@ -16,6 +18,10 @@ const App = () => {
       <CalculatorButton
         onClick={updateExpression}
         value={"+"}
+      ></CalculatorButton>
+      <CalculatorButton
+        onClick={updateExpression}
+        value={"="}
       ></CalculatorButton>
     </div>
   );
