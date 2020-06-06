@@ -5,9 +5,16 @@ const App = () => {
   const [expression, setExpression] = useState("");
 
   const updateExpression = (e) => {
-    e.target.value === "="
-      ? setExpression(eval(expression))
-      : setExpression(expression + e.target.value);
+    switch (e.target.value) {
+      case "=":
+        setExpression(eval(expression));
+        break;
+      case "AC":
+        setExpression("");
+        break;
+      default:
+        setExpression(expression + e.target.value);
+    }
   };
 
   return (
@@ -46,6 +53,10 @@ const App = () => {
       <CalculatorButton
         onClick={updateExpression}
         value={"="}
+      ></CalculatorButton>
+      <CalculatorButton
+        onClick={updateExpression}
+        value={"AC"}
       ></CalculatorButton>
     </div>
   );
