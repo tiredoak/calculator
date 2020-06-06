@@ -12,12 +12,36 @@ const App = () => {
 
   return (
     <div>
-      <div>Test</div>
+      <div>{expression}</div>
       <CalculatorButton onClick={updateExpression} value={1}></CalculatorButton>
       <CalculatorButton onClick={updateExpression} value={2}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={3}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={4}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={5}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={6}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={7}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={8}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={9}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={0}></CalculatorButton>
       <CalculatorButton
         onClick={updateExpression}
         value={"+"}
+      ></CalculatorButton>
+      <CalculatorButton
+        onClick={updateExpression}
+        value={"-"}
+      ></CalculatorButton>
+      <CalculatorButton
+        onClick={updateExpression}
+        value={"*"}
+      ></CalculatorButton>
+      <CalculatorButton
+        onClick={updateExpression}
+        value={"/"}
+      ></CalculatorButton>
+      <CalculatorButton
+        onClick={updateExpression}
+        value={"."}
       ></CalculatorButton>
       <CalculatorButton
         onClick={updateExpression}
