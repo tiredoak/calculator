@@ -3,14 +3,20 @@ import CalculatorButton from "./components/CalculatorButton";
 
 const App = () => {
   const [expression, setExpression] = useState("");
-  let value = 1;
+
+  const updateExpression = (e) => {
+    setExpression(expression + e.target.value);
+  };
 
   return (
     <div>
       <div>Test</div>
-      <button>
-        <CalculatorButton value={value}></CalculatorButton>
-      </button>
+      <CalculatorButton onClick={updateExpression} value={1}></CalculatorButton>
+      <CalculatorButton onClick={updateExpression} value={2}></CalculatorButton>
+      <CalculatorButton
+        onClick={updateExpression}
+        value={"+"}
+      ></CalculatorButton>
     </div>
   );
 };

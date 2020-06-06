@@ -1,7 +1,11 @@
 import React from "react";
 
 const CalculatorButton = (props) => {
-  return <p>{props.value}</p>;
+  return (
+    <button value={props.value} onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
 };
 
 export default CalculatorButton;
